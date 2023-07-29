@@ -74,7 +74,12 @@ result.style.margin = '5px';
 result.style.width = '100%';
 
 let unitNames = ['spear', 'sword', 'axe', 'spy', 'light', 'heavy', 'ram', 'catapult', 'knight', 'snob']
-let tr = document.createElement("tr");
+let th_0 = document.createElement("th");
+let sum = document.createElement("a");
+let text = document.createTextNode("Suma wsparcia");
+sum.appendChild(text);
+th_0.appendChild(sum);
+result.appendChild(th_0);
 for (let i = 0; i < 10; i++) {
     let th = document.createElement("th");
     let info = document.createElement("a");
@@ -87,6 +92,9 @@ for (let i = 0; i < 10; i++) {
 }
 
 let tr_units = document.createElement("tr");
+let td = document.createElement("td");
+td.append(document.createTextNode("Suma: "))
+tr_units.appendChild(td);
 for (let allSumsKey in allSums) {
     console.log(allSumsKey + " = " + allSums[allSumsKey]);
     let td = document.createElement("td");
@@ -95,4 +103,4 @@ for (let allSumsKey in allSums) {
 }
 result.appendChild(tr_units);
 
-document.querySelector('#contentContainer').append(result);
+document.querySelector('#contentContainer').prepend(result);
