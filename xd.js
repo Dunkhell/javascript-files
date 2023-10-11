@@ -6,7 +6,7 @@ function fillIn() {
             { ram: 1 },
             { catapult: 1 }
         ],
-        fillWith: 'spy,spear,sword,axe,archer,light,marcher,heavy,ram,catapult',
+        fillWith: 'spy:11,axe:60,spear:60,light:10,spy,spear,sword,axe,archer,light,marcher,heavy,ram,catapult',
         fillExact: 'false',
         safeguard: {}
     };
